@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Table of Content
 
-## Getting Started
+-   [Description](#description)
+-   [Setup](#setup)
+-   [Project Preview](#project-preview)
 
-First, run the development server:
+## Description
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+This small project is part of an interview exercise where I was tasked to developed a minimum viable product (MVP) of the Vizzly dashboard builder.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+✅ **The requirements for the builder are as follows**
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+-   The user should be able to create at least one of the following components from the data set we provide in the “resources” section;
+    -   Line chart
+    -   Bar chart
+    -   Pie chart
+-   When building each component, the user must be able to;
+    -   Select at least one field as the dimension.
+    -   Select at least one field as the measure.
+    -   Be able to choose between two aggregate functions.
+-   The user should be able to add components to the dashboard.
+-   The dashboard must have at least 4 cells.
+-   One hidden “easter egg” feature which results in something cool happening.
+-   A way of bundling the dashboard component, which can be installed into other projects if published to NPM.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+🎯 **Stretch goals**
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+-   Components on the dashboard should be editable once they’ve been added
+-   Support multiple component types; e.g Line and a bar chart.
+-   Allow the user to add more rows to the dashboard
+-   Allow the user to split and merge cells on the dashboard
+-   Allow the user to customise the theme of the dashboard. For example;
+    -   Setting brand colours
+    -   Changing the font family
+-   Making a shareable link to the dashboard - without persisting it 🤔
+-   Drag-n-drop components around the dashboard
+-   Support time dimensions in the components.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+<a id="setup"></a>
 
-## Learn More
+## Setup
 
-To learn more about Next.js, take a look at the following resources:
+1. Download [Node.js](https://nodejs.org/en/download/);
+2. Download the project by using `git clone https://github.com/Danielvermel/viz-dashboard.git` in your terminal;
+3. In your terminal run `npm i` to install all dependencies;
+4. And finally run `npm run dev`;
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<a id="project-preview"></a>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Project Preview
 
-## Deploy on Vercel
+### Dashboard (without Charts)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+![dashboardNoCharts](https://user-images.githubusercontent.com/32749108/209864346-ecefd7bf-2a79-43c0-ad62-c538e9a9742e.png)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Dashboard (with Charts)
+
+![dashbaordCharts](https://user-images.githubusercontent.com/32749108/209864417-e7cfc5e4-4b33-4dc6-bb08-f55a4dd7e76a.png)
