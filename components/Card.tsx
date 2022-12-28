@@ -1,6 +1,7 @@
-import { Menu } from "@headlessui/react";
-import { useState } from "react";
+import { Dialog, Menu, Listbox, Transition } from "@headlessui/react";
+import { Fragment, useEffect, useRef, useState } from "react";
 
+import { Chart } from "./Chart";
 import { Modal } from "./Modal";
 
 export const Card = ({ totalCards, setTotalCards }) => {
@@ -75,7 +76,13 @@ export const Card = ({ totalCards, setTotalCards }) => {
                     </Menu>
                 </div>
             ) : (
-                <h1>Chart</h1>
+                <Chart
+                    type={chartName}
+                    dimension={dimensionField}
+                    measure={measureField}
+                    aggregate={aggregateField}
+                    setIsOpen={setIsOpen}
+                />
             )}
         </>
     );
